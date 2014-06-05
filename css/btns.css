@@ -1,28 +1,44 @@
 /*  btns.css Simple css utilities for building responsive buttons Author: mrmrs License: MIT  */
-.btn { color: #222; text-decoration: none; text-transform: uppercase; letter-spacing: .15em; -webkit-transition: color .3s, background-color .3s; transition: color .3s, background-color .3s; font-family: avenir, helvetica, arial, sans-serif; display: inline-block; border-style: solid; border-width: 1px; padding: 1em .75em; border-radius: .4em; margin-bottom: .5em; }
+/* Base class */
+.btn { color: #111; text-decoration: none; text-transform: uppercase; letter-spacing: .15em; -webkit-transition: color .4s, background-color .4s, border .4s; transition: color .4s, background-color .4s, border .4s; font-family: avenir, helvetica, arial, sans-serif; display: inline-block; border-style: solid; border-width: 1px; padding: 1em .75em; border-radius: .3em; margin-bottom: .5em; }
 
 .btn--full { width: 100%; max-width: 20em; display: block; margin-left: auto; margin-right: auto; text-align: center; border-radius: .25em; }
 
-.btn:hover { -webkit-transition: background-color .3s, color .3s; transition: background-color .3s, color .3s; }
+.btn:hover { color: #7FDBFF; border: 1px solid #7FDBFF; -webkit-transition: background-color .3s, color .3s, border .3s; transition: background-color .3s, color .3s, border .3s; }
 
-.btn-gray:hover { background-color: #ddd; color: #111; }
+.btn:active { color: #0074D9; border: 1px solid #0074D9; -webkit-transition: background-color .3s, color .3s, border .3s; transition: background-color .3s, color .3s, border .3s; }
 
-.btn-gray:active { background-color: #ccc; color: #101010; }
+/* 
+ Sizes   Small  = .btn--s Medium = .btn--m Large  = .btn--l
 
-.btn--blue { background-color: #0074D9; color: #fff; }
-
-.btn--blue:hover { background-color: #0063aa; }
-
-.btn--black { background-color: #000; color: #fff; }
-
-.btn--black:hover { background-color: #222; }
-
-.btn--black:hover { background-color: #444; }
-
-.btn--black { background-color: #000; }
-
+*/
 .btn--s { font-size: 12px; }
 
 .btn--m { font-size: 14px; }
 
 .btn--l { font-size: 20px; border-radius: 0.25em !important; }
+
+/*
+ Skins
+ Black & White Grays Colors
+
+*/
+.btn-gray:hover { background-color: #ddd; color: #111; }
+
+.btn-gray:active { background-color: #ccc; color: #101010; }
+
+.btn--blue { color: #fff; background-color: #0074D9; }
+
+.btn--blue:hover { color: white !important; background-color: #0063aa; }
+
+.btn--blue:active { color: #fff; background-color: #001F3F; }
+
+.btn--black { color: #fff; background-color: #000; color: #fff; }
+
+.btn--black:hover { color: #fff; border-color: #222; background-color: #222; }
+
+.btn--black:active { color: #fff; border-color: #666; background-color: #777; }
+
+.btn--black:hover { background-color: #444; }
+
+.btn--black { background-color: #000; }
