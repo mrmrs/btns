@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>
+      BTNS
+    </title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/btns.css">
+    <style type="text/css" media="screen">
+
+      body, html { height: 100%; padding: 0; margin: 0; }
+      div, header, article, section, footer, main { box-sizing: border-box; }
+      html { font-family: avenir, helvetica, arial, sans-serif;}
+      h2 { font-weight: 100; font-size: 20px; }
+      .mega { font-size: 3em; }
+      .dib { display: inline-block; }
+      .tc { text-align: center; }
+      .mrs { margin-right: 1em; }
+      .bb { border-bottom: 1px dotted #bbb; }
+      .pvs { padding-bottom: 2em; padding-top: 2em; }
+      .pvl { padding-bottom: 4em; padding-top: 4em; }
+      .pbl { padding-bottom: 4em;  }
+      .pbm { padding-bottom: 2em;  }
+      header, section, footer { padding: 1em; }
+      .list { list-style-type: none; }
+      dl,dd,dt { margin: 0; padding: 0; }
+      p { font-size: 20px; line-height: 1.5; max-width: 48em; } 
+      .btn--full { margin-bottom: .5em; }
+      .f2 { font-size: 20px; }
+      .f3 { font-size: 14px; }
+      code { overflow: auto; line-height: 1.6; }
+      .btn--github { -webkit-transition: all .4s; background: url(octocat.svg) no-repeat; background-size: contain; padding-left: 2em;  opacity: 0.6; }
+      .white { color: rgba(255,255,255,0.7); }
+      .mt { margin-top: 3em; }
+      .btn--header { color: rgba(255,255,255, .6); border: 2px solid rgba(255,255,255, .4); }
+      .btn--header:hover { color: rgba(255,255,255, .8); border: 2px solid rgba(255,255,255, .5); }
+      .btn--header:hover .btn--github{ -webkit-transition: all .3s; opacity: .9; }
+      
+      .thin { font-weight: 100; }
+      .title { text-transform: uppercase; letter-spacing: .2em; }
+      .track { letter-spacing: .13em; }
+
+
+@media screen and (min-width: 48em) {
+      .mega { font-size: 4em; }
+      header, section, footer { padding: 2em; }
+
+}
+
+@media screen and (min-width: 48em) and (max-width: 64em) {
+
+}
+
+@media screen and (min-width: 64em)  {
+
+      section, footer { padding: 2em 4em; }
+      header { padding: 6em 2em!important;} 
+}
+    </style>
+  </head>
+  <body>
+    <header class="bb pvs" style="background: url(header-rev.jpg) no-repeat bottom center; background-size: cover; ">
+      <h1 class="mega track">BTNS</h1>
+      <h2 class="pbm">
+        A small css module for building beautiful, responsive buttons.
+      </h2>
+      <h3 class="white title thin" style="font-size: 14px;">Get the code</h3>
+      <a href="http://github.com/mrmrs/btns" class="btn btn--m btn--header"><i class="btn--github"></i>View on github</a>
+      <br>
+      <p class="white f3 mt">...or install with npm </p>
+      <code class="white f2">npm install --save-dev btns</code>
+    </header>
+    <main>
+    
+    <section class="bb pbl">
+      <h2 class="title">The default button</h2>
+<code style="display:block; margin-bottom: 2em;background-color:rgba(142, 157, 157, .2); padding: .75em;max-width: 30em;">
+&lt;a href="#" class="btn"&gt;A Button&lt;a&gt;
+</code>
+      <a href="#" class="btn">A Button</a>
+      <pre>
+      </pre>
+      
+    </section>
+    <section class="bb pbl">
+      <h2 class="title">Button Sizes</h2>
+      <p>
+        By default the base button class does not declare a font-size, so it is naturally set to 1em.
+        Extensions to the <code>.btn</code> class are available for an additional three sizes: <b>small</b>, <b>medium</b>, and <b>large</b>.
+      </p>
+        <pre>
+      <code style="font-size: 16px; display: block; padding-left: 1em; background-color:rgba(142, 157, 157, .2); max-width: 48em; border-radius: 4px;">
+.btn--l { font-size: 20px; } /* large */
+.btn    {} /* default: no declared font-size */
+.btn--m { font-size: 14px; } /* medium */
+.btn--s { font-size: 12px; } /* small */
+      </code>
+        </pre>
+      <div class="dib mrs">
+        <a href="#" class="btn btn--l btn--white">Large Button</a>
+      </div>
+      <div class="dib mrs">
+        <a href="#" class="btn btn--white">Default Button</a>
+      </div>
+      <div class="dib mrs">
+        <a href="#" class="btn btn--m btn--white">Medium Button</a>
+      </div>
+      <div class="dib mrs">
+        <a href="#" class="btn btn--s btn--white">Small Button</a>
+      </div>
+    </section>
+    <section> 
+      <h2>Skins</h2>
+      <div>
+      <h3>Black &amp; White</h3>
+      <a href="#" class="btn btn--m btn--black">A button link</a>
+      <a href="#" class="btn btn--m btn--black">View on <b>github</b></a>
+      <a href="#" class="btn btn--m btn--black">Download <b>.zip</b></a>
+      <a href="#" class="btn btn--m btn--black">Sign Up ▸</a>
+    </div>
+    <div>
+      <a href="#" class="btn btn--m btn--white">A button link</a>
+      <a href="#" class="btn btn--m btn--white">View on <b>github</b></a>
+      <a href="#" class="btn btn--m btn--white">Download a <b>.zip</b></a>
+      <a href="#" class="btn btn--m btn--white">View more ▸</a>
+    </div>
+    </section>
+    <section>
+      <h3>The grays though</h3>
+      <a href="#" class="btn btn--m btn--gray">A button link</a>
+      <a href="#" class="btn btn--m btn--gray">View on <b>github</b></a>
+      <a href="#" class="btn btn--m btn--gray">Download a <b>.zip</b></a>
+      <a href="#" class="btn btn--m btn--gray">View more ▸</a>
+    </section>
+    <section class="bb pbl">
+    <h3>Those colors</h3>
+    <a href="#" class="btn btn--m btn--blue">A button link</a>
+    <a href="#" class="btn btn--m btn--blue">View on github</a>
+    <a href="#" class="btn btn--m btn--blue">Download a .zip</a>
+    <a href="#" class="btn btn--m btn--blue">View more ▸</a>
+  </section>
+
+  <section>
+    <h3>Block buttons</h3>
+    <p>Centerd, full-width on mobile, with a max-width of 30em.</p>
+    <a href="#" class="btn btn--s btn--full btn--white">Save</a>
+    <a href="#" class="btn btn--m btn--full btn--black">Submit</a>
+    <a href="#" class="btn btn--full btn--white">Cancel</a>
+    <a href="#" class="btn btn--l btn--full btn--black">Delete</a>
+  </section>
+  </main>
+  <footer>
+
+  </footer>
+  </body>
+</html>
