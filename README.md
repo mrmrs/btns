@@ -10,7 +10,7 @@ If you want to customize btns it comes with a few handy gulp tasks for developme
 Set up the project by cloning the repo, navigating into it, then installing the necessary dependencies by running:
 
     git clone git@github:mrmrs/btns.git
-    cd trim
+    cd btns
     npm install -g gulp
     npm install .
 
