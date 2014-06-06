@@ -2,7 +2,7 @@
 /* Base class */
 .btn { color: #111; text-decoration: none; text-transform: uppercase; letter-spacing: .15em; -webkit-transition: color .4s, background-color .4s, border .4s; transition: color .4s, background-color .4s, border .4s; font-family: avenir, helvetica, arial, sans-serif; display: inline-block; border-style: solid; border-width: 1px; padding: 1em .75em; border-radius: .3em; margin-bottom: .5em; }
 
-.btn--full { width: 100%; max-width: 20em; display: block; margin-left: auto; margin-right: auto; text-align: center; border-radius: .25em; }
+.btn--full { border-radius: .25em; display: block; margin-left: auto; margin-right: auto; text-align: center; width: 100%; }
 
 .btn:hover { color: #7FDBFF; border: 1px solid #7FDBFF; -webkit-transition: background-color .3s, color .3s, border .3s; transition: background-color .3s, color .3s, border .3s; }
 
@@ -42,3 +42,5 @@
 .btn--black:hover { background-color: #444; }
 
 .btn--black { background-color: #000; }
+
+@media screen and (min-width: 32em) { .btn--full { max-width: 16em !important; } }

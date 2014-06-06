@@ -11,14 +11,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/btns.css">
     <style type="text/css" media="screen">
-
+      a { text-decoration: none; color:#222; }
       body, html { height: 100%; padding: 0; margin: 0; }
-      div, header, article, section, footer, main { box-sizing: border-box; }
+      div, header, article, section, footer, main, a { box-sizing: border-box; }
       html { font-family: avenir, helvetica, arial, sans-serif;}
       h2 { font-weight: 100; font-size: 20px; }
       .mega { font-size: 3em; }
       .dib { display: inline-block; }
       .tc { text-align: center; }
+      .small { font-size: 14px; }
       .mrs { margin-right: 1em; }
       .bb { border-bottom: 1px dotted #bbb; }
       .bt { border-top: 1px dotted #bbb; }
@@ -150,15 +151,19 @@
 
   <section>
     <h3>Block buttons</h3>
-    <p>Centerd, full-width on mobile, with a max-width of 30em.</p>
+    <p>Avoid having buttons that are obscenely large on tablets and desktop with the <code>.btn--full</code> extension.</p>
+    <p>Centered, full-width on mobile, with a max-width of 16em on larger screens.</p>
     <a href="#" class="btn btn--s btn--full btn--white">Save</a>
     <a href="#" class="btn btn--m btn--full btn--black">Submit</a>
     <a href="#" class="btn btn--full btn--white">Cancel</a>
-    <a href="#" class="btn btn--l btn--full btn--black">Delete</a>
+    <a href="#" class="btn btn--l btn--full btn--black">Close</a>
   </section>
   </main>
   <footer class="bt">
-    <p>Built by <a href="http://mrmrs.io/">mrmrs</a></p>
+    <p class="small">Built by <a href="http://mrmrs.io/">mrmrs</a></p>
+    <small>Dedicated to <a href="http://www.cutecatgifs.com/wp-content/uploads/2014/05/p4bg.gif">HK</a></small>
+    <br>
+    <small>License: MIT</small>
   </footer>
   </body>
 </html>
