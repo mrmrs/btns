@@ -21,6 +21,7 @@
       .tc { text-align: center; }
       .mrs { margin-right: 1em; }
       .bb { border-bottom: 1px dotted #bbb; }
+      .bt { border-top: 1px dotted #bbb; }
       .pvs { padding-bottom: 2em; padding-top: 2em; }
       .pvl { padding-bottom: 4em; padding-top: 4em; }
       .pbl { padding-bottom: 4em;  }
@@ -92,6 +93,9 @@
         By default the base button class does not declare a font-size, so it is naturally set to 1em.
         Extensions to the <code>.btn</code> class are available for an additional three sizes: <b>small</b>, <b>medium</b>, and <b>large</b>.
       </p>
+        <p>
+          If you'd like to extend or customize the size of the buttons, it's incredibly easy. Just apply a new font-size to the button and watch it shrink/grow. 
+      </p>
         <pre>
       <code style="font-size: 16px; display: block; padding-left: 1em; background-color:rgba(142, 157, 157, .2); max-width: 48em; border-radius: 4px;">
 .btn--l { font-size: 20px; } /* large */
@@ -114,7 +118,7 @@
       </div>
     </section>
     <section> 
-      <h2>Skins</h2>
+      <h2 class="title">Button Skins</h2>
       <div>
       <h3>Black &amp; White</h3>
       <a href="#" class="btn btn--m btn--black">A button link</a>
@@ -153,8 +157,8 @@
     <a href="#" class="btn btn--l btn--full btn--black">Delete</a>
   </section>
   </main>
-  <footer>
-
+  <footer class="bt">
+    <p>Built by <a href="http://mrmrs.io/">mrmrs</a></p>
   </footer>
   </body>
 </html>
