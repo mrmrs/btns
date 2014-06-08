@@ -16,6 +16,7 @@
       div, header, article, section, footer, main, a { box-sizing: border-box; }
       html { font-family: avenir, helvetica, arial, sans-serif;}
       h2 { font-weight: 100; font-size: 20px; }
+      .man { margin: 0; }
       .mega { font-size: 3em; }
       .dib { display: inline-block; }
       .tc { text-align: center; }
@@ -34,12 +35,16 @@
       .btn--full { margin-bottom: .5em; }
       .f2 { font-size: 20px; }
       .f3 { font-size: 14px; }
-      code { overflow: auto; line-height: 1.6; }
+      pre { overflow: auto; }
+      code { width: 100%; line-height: 1.6; }
       .btn--github { -webkit-transition: all .4s; background: url(svg/octocat.svg) no-repeat; background-size: contain; padding-left: 2em;  opacity: 0.6; }
       .white { color: rgba(255,255,255,0.7); }
       .mt { margin-top: 3em; }
-      .btn--header { color: rgba(255,255,255, .6); border: 2px solid rgba(255,255,255, .4); }
-      .btn--header:hover { color: rgba(255,255,255, .8); border: 2px solid rgba(255,255,255, .5); }
+
+      .btn--header,
+      .btn--header:link,
+      .btn--header:visited { color: rgba(255,255,255, .6); border: 2px solid rgba(255,255,255, .4); }
+      .btn--header:hover { color: rgba(255,255,255, .8); border: 2px solid rgba(255,255,255, .6); }
       .btn--header:hover .btn--github{ -webkit-transition: all .3s; opacity: .9; }
       
       .thin { font-weight: 100; }
@@ -77,12 +82,21 @@
       <code class="white f2">npm install --save-dev btns</code>
     </header>
     <main>
+      <section>
+        <p>
+          This light-weight* css module is a set simple utilities you can use to create a variety of button style links. Easily customize or extend btns.css to fit your sites styles.
+
+        </p>
+        <small>* 655B gzipped and minified.</small> 
+      </section>
     
     <section class="bb pbl">
       <h2 class="title">The default button</h2>
-<code style="display:block; margin-bottom: 2em;background-color:rgba(142, 157, 157, .2); padding: .75em;max-width: 30em;">
+<pre>
+<code>
 &lt;a href="#" class="btn"&gt;A Button&lt;a&gt;
 </code>
+</pre>
       <a href="#" class="btn">A Button</a>
       <pre>
       </pre>
@@ -98,51 +112,85 @@
           If you'd like to extend or customize the size of the buttons, it's incredibly easy. Just apply a new font-size to the button and watch it shrink/grow. 
       </p>
         <pre>
-      <code style="font-size: 16px; display: block; padding-left: 1em; background-color:rgba(142, 157, 157, .2); max-width: 48em; border-radius: 4px;">
-.btn--l { font-size: 20px; } /* large */
-.btn    {} /* default: no declared font-size */
-.btn--m { font-size: 14px; } /* medium */
-.btn--s { font-size: 12px; } /* small */
+      <code>
+&lt;a href="#" class="btn btn--l"&gt;A Button&lt;a&gt;
+&lt;a href="#" class="btn"&gt;A Button&lt;a&gt;
+&lt;a href="#" class="btn btn--m"&gt;A Button&lt;a&gt;
+&lt;a href="#" class="btn btn--s"&gt;A Button&lt;a&gt;
       </code>
         </pre>
       <div class="dib mrs">
-        <a href="#" class="btn btn--l btn--white">Large Button</a>
+        <a href="#" class="btn btn--l">Large Button</a>
       </div>
       <div class="dib mrs">
-        <a href="#" class="btn btn--white">Default Button</a>
+        <a href="#" class="btn">Default Button</a>
       </div>
       <div class="dib mrs">
-        <a href="#" class="btn btn--m btn--white">Medium Button</a>
+        <a href="#" class="btn btn--m">Medium Button</a>
       </div>
       <div class="dib mrs">
-        <a href="#" class="btn btn--s btn--white">Small Button</a>
+        <a href="#" class="btn btn--s">Small Button</a>
       </div>
     </section>
     <section> 
       <h2 class="title">Button Skins</h2>
       <div>
       <h3>Black &amp; White</h3>
+<pre>
+<code>
+&lt;a href="#" class="btn btn--m btn--black"&gt;A button link&lt;/a&gt;
+&lt;a href="#" class="btn btn--m btn--white"&gt;A button link&lt;/a&gt;
+</code>
+</pre>
+
       <a href="#" class="btn btn--m btn--black">A button link</a>
       <a href="#" class="btn btn--m btn--black">View on <b>github</b></a>
       <a href="#" class="btn btn--m btn--black">Download <b>.zip</b></a>
       <a href="#" class="btn btn--m btn--black">Sign Up ▸</a>
     </div>
     <div>
-      <a href="#" class="btn btn--m btn--white">A button link</a>
-      <a href="#" class="btn btn--m btn--white">View on <b>github</b></a>
-      <a href="#" class="btn btn--m btn--white">Download a <b>.zip</b></a>
-      <a href="#" class="btn btn--m btn--white">View more ▸</a>
+      <a href="#" class="btn btn--m">A button link</a>
+      <a href="#" class="btn btn--m">View on <b>github</b></a>
+      <a href="#" class="btn btn--m">Download a <b>.zip</b></a>
+      <a href="#" class="btn btn--m">View more ▸</a>
     </div>
     </section>
     <section>
-      <h3>The grays though</h3>
+      <h3>The grays</h3>
+<pre>
+<code>
+&lt;a href="#" class="btn btn--m btn--gray"&gt;A button link&lt;/a&gt;
+&lt;a href="#" class="btn btn--m btn--gray-dark"&gt;A button link&lt;/a&gt;
+&lt;a href="#" class="btn btn--m btn--gray-border"&gt;A button link&lt;/a&gt;
+</code>
+</pre>
+      <div>
       <a href="#" class="btn btn--m btn--gray">A button link</a>
       <a href="#" class="btn btn--m btn--gray">View on <b>github</b></a>
       <a href="#" class="btn btn--m btn--gray">Download a <b>.zip</b></a>
       <a href="#" class="btn btn--m btn--gray">View more ▸</a>
+    </div>
+      <div>
+        <a href="#" class="btn btn--m btn--gray-dark">A button link</a>
+        <a href="#" class="btn btn--m btn--gray-dark">View on <b>github</b></a>
+        <a href="#" class="btn btn--m btn--gray-dark">Download a <b>.zip</b></a>
+        <a href="#" class="btn btn--m btn--gray-dark">View more ▸</a>
+      </div>
+      <div>
+      <a href="#" class="btn btn--m btn--gray-border">A button link</a>
+      <a href="#" class="btn btn--m btn--gray-border">View on <b>github</b></a>
+      <a href="#" class="btn btn--m btn--gray-border">Download a <b>.zip</b></a>
+      <a href="#" class="btn btn--m btn--gray-border">View more ▸</a>
+    </div>
+
     </section>
     <section class="bb pbl">
-    <h3>Those colors</h3>
+    <h3>The blues</h3>
+<pre>
+<code class="no-wrap">
+&lt;a href="#" class="btn btn--m btn--blue"&gt;A button link&lt;/a&gt;
+</code>
+</pre>
     <a href="#" class="btn btn--m btn--blue">A button link</a>
     <a href="#" class="btn btn--m btn--blue">View on github</a>
     <a href="#" class="btn btn--m btn--blue">Download a .zip</a>
@@ -153,10 +201,10 @@
     <h3>Block buttons</h3>
     <p>Avoid having buttons that are obscenely large on tablets and desktop with the <code>.btn--full</code> extension.</p>
     <p>Centered, full-width on mobile, with a max-width of 16em on larger screens.</p>
-    <a href="#" class="btn btn--s btn--full btn--white">Save</a>
-    <a href="#" class="btn btn--m btn--full btn--black">Submit</a>
-    <a href="#" class="btn btn--full btn--white">Cancel</a>
-    <a href="#" class="btn btn--l btn--full btn--black">Close</a>
+    <a href="#" class="btn btn--s btn--full btn--black">Save</a>
+    <a href="#" class="btn btn--m btn--full btn--white">Submit</a>
+    <a href="#" class="btn btn--full btn--gray">Cancel</a>
+    <a href="#" class="btn btn--l btn--full btn--blue">Sign Up</a>
   </section>
   </main>
   <footer class="bt">
