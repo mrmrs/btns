@@ -38,6 +38,7 @@
       pre { overflow: auto; }
       code { width: 100%; line-height: 1.6; }
       .btn--github { -webkit-transition: all .4s; background: url(svg/octocat.svg) no-repeat; background-size: contain; padding-left: 2em;  opacity: 0.6; }
+      .btn--twitter { -webkit-transition: all .4s; background: url(svg/twitter.svg) no-repeat; background-size: contain; padding-left: 2em;  opacity: 0.6; }
       .white { color: rgba(255,255,255,0.7); }
       .mt { margin-top: 3em; }
 
@@ -58,10 +59,6 @@
 
 }
 
-@media screen and (min-width: 48em) and (max-width: 64em) {
-
-}
-
 @media screen and (min-width: 64em)  {
 
       section, footer { padding: 2em 4em; }
@@ -76,10 +73,15 @@
         A small css module for building beautiful, responsive buttons.
       </h2>
       <h3 class="white title thin" style="font-size: 14px;">Get the code</h3>
-      <a href="http://github.com/mrmrs/btns" class="btn btn--m btn--header"><i class="btn--github"></i>View on github</a>
-      <br>
+      <a href="http://github.com/mrmrs/btns" class="btn btn--m btn--header mrs mbs"><i class="btn--github"></i>View on github</a>
+<a href="https://twitter.com/intent/tweet?text=A small css module for building beautiful, responsive buttons.&amp;url=http://mrmrs.io/btns/&amp;via=mrmrs_" target="_blank" class="btn btn--m btn--header">
+<i class="btn--twitter"></i>
+    Tweet This
+  </a>
       <p class="white f3 mt">...or install with npm </p>
       <code class="white f2">npm install --save-dev btns</code>
+<br>
+<br>
     </header>
     <main>
       <section>
@@ -208,6 +210,10 @@
   </section>
   </main>
   <footer class="bt">
+<div class="tc">
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="A small css module for building beautiful, responsive buttons." data-via="mrmrs_" data-size="large">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
     <p class="small">Built by <a href="http://mrmrs.io/">mrmrs</a></p>
     <small>Dedicated to <a href="http://www.cutecatgifs.com/wp-content/uploads/2014/05/p4bg.gif">HK</a></small>
     <br>
