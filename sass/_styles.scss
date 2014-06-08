@@ -75,7 +75,8 @@
 
 */
 
-.btn--full {
+.btn--full,
+.btn--full:link {
   border-radius: .25em;
   display: block;
   margin-left: auto;
@@ -105,7 +106,9 @@
 
 /* BLACK & WHITE */
 
-.btn--black { 
+.btn--black,
+.btn--black:link,
+.btn--black:visited { 
   color: #fff;
   background-color: #000;
 }

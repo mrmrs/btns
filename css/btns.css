@@ -26,7 +26,7 @@
  Code: <a href="#" class="btn btn--full">
 
 */
-.btn--full { border-radius: .25em; display: block; margin-left: auto; margin-right: auto; text-align: center; width: 100%; }
+.btn--full, .btn--full:link { border-radius: .25em; display: block; margin-left: auto; margin-right: auto; text-align: center; width: 100%; }
 
 /*
  Skins
@@ -35,7 +35,7 @@
 
 */
 /* BLACK & WHITE */
-.btn--black { color: #fff; background-color: #000; }
+.btn--black, .btn--black:link, .btn--black:visited { color: #fff; background-color: #000; }
 
 .btn--black:hover { color: #fff; background-color: #777; border-color: #777; }
 
