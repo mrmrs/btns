@@ -5,17 +5,24 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefix = require('gulp-autoprefixer'),
     minifyCSS = require('gulp-minify-css'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     imagemin = require('gulp-imagemin'),
     svgmin = require('gulp-svgmin'),
-    express = require('express'),
-    csslint = require('gulp-csslint');
+    csslint = require('gulp-csslint'),
+    size = require('gulp-size'),
+    rename = require('gulp-rename'),
+    browserSync = require('browser-sync'),
+    browserReload = browserSync.reload;
 
 
-// Task to minify all css files in the css directory
+
+// Minify all css files in the css directory
+// Run this in the root directory of the project with `gulp minify-css `
 gulp.task('minify-css', function(){
-  gulp.src('./css/*.css')
-    .pipe(minifyCSS({keepSpecialComments: 0}))
+  gulp.src('./css/btns.css')
+    .pipe(minifyCSS())
+    .pipe(size({gzip: true, showFiles: true, title:'minified css'}))
+    .pipe(rename('btns.min.css'))
     .pipe(gulp.dest('./css/'));
 });
 
@@ -46,23 +53,36 @@ gulp.task('csslint', function(){
 
 });
 
-// Task that compiles scss files down to good old css
 gulp.task('pre-process', function(){
   gulp.src('./sass/btns.scss')
       .pipe(watch(function(files) {
-        return files.pipe(sass({loadPath: ['./sass/'], style: "compact"}))
+        return files.pipe(sass())
+          .pipe(size({gzip: false, showFiles: true, title:'PRE-prefixed uncompressed css'}))
+          .pipe(size({gzip: true, showFiles: true, title:'PRE-prefixed uncompressed css'}))
           .pipe(prefix())
-          .pipe(gulp.dest('./css/'));
+          .pipe(size({gzip: false, showFiles: true, title:'Prefixed uncompressed css'}))
+          .pipe(size({gzip: true, showFiles: true, title:'Prefixed uncompressed css'}))
+          .pipe(gulp.dest('css'))
+          .pipe(browserSync.reload({stream:true}));
       }));
 });
 
-// static server function
-//
-function startServer() {
-  var app = express();
-  app.use(express.static(__dirname));
-  app.listen(3000);
-}
+
+// Initialize browser-sync which starts a static server also allows for 
+// browsers to reload on filesave
+gulp.task('browser-sync', function() {
+    browserSync.init(null, {
+        server: {
+            baseDir: "./"
+        }
+    });
+});
+
+// Function to call for reloading browsers
+gulp.task('bs-reload', function () {
+    browserSync.reload();
+});
+
 
 /*
    DEFAULT TASK
@@ -75,14 +95,13 @@ function startServer() {
 
 */
 
-gulp.task('default', function(){
-  startServer();
-  gulp.watch(['*.html', './sass/*.scss'], function(event) {
-    gulp.run('pre-process', 'csslint');
-  });
+gulp.task('default', ['pre-process', 'minify-css', 'bs-reload', 'browser-sync'], function(){
+  gulp.start('pre-process', 'csslint');
+  gulp.watch('sass/*.scss', ['pre-process', 'minify-css']);
+  gulp.watch('css/btns.css', ['bs-reload']);
+  gulp.watch('*.html', ['bs-reload']);
 });
 
 gulp.task('production', function(){
     gulp.run('minify-css', 'minify-img', 'minify-svg');
 });
-
