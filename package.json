@@ -2,7 +2,7 @@
   "name": "btns",
   "version": "1.0.0",
   "homepage": "http://mrmrs.io/btns",
-  "description": "A small css module for building responsive buttons", 
+  "description": "A small css module for building responsive buttons",
   "keywords": [
     "gulp",
     "performance",
@@ -22,16 +22,18 @@
     "url": "https://github.com/mrmrs/btns/issues"
   },
   "devDependencies": {
+    "browser-sync": "^1.3.0",
     "gulp": "~3.5.6",
-    "gulp-minify-css": "~0.2.0",
-    "gulp-util": "~2.2.12",
-    "gulp-watch": "~0.5.4",
+    "gulp-autoprefixer": "0.0.5",
     "gulp-csslint": "~0.1.4",
     "gulp-imagemin": "~0.1.5",
-    "gulp-svgmin": "~0.4.5",
-    "gulp-autoprefixer": "0.0.5",
+    "gulp-minify-css": "~0.2.0",
+    "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "~0.3.1",
-    "express": "~4.1.0"
+    "gulp-size": "^1.0.0",
+    "gulp-svgmin": "~0.4.5",
+    "gulp-util": "~2.2.12",
+    "gulp-watch": "~0.5.4"
   },
   "author": {
     "name": "@mrmrs",
@@ -39,7 +41,10 @@
     "url": "http://mrmrs.cc"
   },
   "contributors": [
-    { "name": "@mrmrs", "email": "hi@mrmrs.cc" }
+    {
+      "name": "@mrmrs",
+      "email": "hi@mrmrs.cc"
+    }
   ],
   "engines": {
     "node": ">=0.10.22"
