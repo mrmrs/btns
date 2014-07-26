@@ -9,16 +9,18 @@ You can just grab the css.
 If you want to customize btns it comes with a few handy gulp tasks for development.
 Set up the project by cloning the repo, navigating into it, then installing the necessary dependencies by running:
 
-    git clone git@github:mrmrs/btns.git
-    cd btns
-    npm install -g gulp
-    npm install .
+*Note you might not need to install with sudo*
+```bash
+git clone git@github:mrmrs/btns.git && cd btns
+sudo npm install -g gulp browser-sync
+sudo npm install .
+```
 
 ### To run the development environment
 
 Once you've run npm install just run this very complicated command in your terminal to start gulp
 
-    gulp
+    npm start
 
 This will watch the sass directory and do the following on file change:
   • Compile scss files down to css/app.css
@@ -29,7 +31,11 @@ This will watch the sass directory and do the following on file change:
 
 ### To minify assets for production
 
-    gulp production
+```gulp production```
+
+or just to minify the css 
+
+```gulp minify-css``` 
 
 This will
   • Compile scss files down to css/app.css
