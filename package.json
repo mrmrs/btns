@@ -2,7 +2,7 @@
   "name": "btns",
   "version": "1.0.0",
   "homepage": "http://mrmrs.io/btns",
-  "description": "A small css module for building responsive buttons", 
+  "description": "A small css module for building responsive buttons",
   "keywords": [
     "gulp",
     "performance",
@@ -39,10 +39,16 @@
     "url": "http://mrmrs.cc"
   },
   "contributors": [
-    { "name": "@mrmrs", "email": "hi@mrmrs.cc" }
+    {
+      "name": "@mrmrs",
+      "email": "hi@mrmrs.cc"
+    }
   ],
   "engines": {
     "node": ">=0.10.22"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp"
+  }
 }
