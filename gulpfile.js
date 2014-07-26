@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefix = require('gulp-autoprefixer'),
     minifyCSS = require('gulp-minify-css'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     imagemin = require('gulp-imagemin'),
     svgmin = require('gulp-svgmin'),
     csslint = require('gulp-csslint'),
@@ -19,10 +19,10 @@ var gulp = require('gulp'),
 // Minify all css files in the css directory
 // Run this in the root directory of the project with `gulp minify-css `
 gulp.task('minify-css', function(){
-  gulp.src('./css/i.css')
+  gulp.src('./css/btns.css')
     .pipe(minifyCSS())
     .pipe(size({gzip: true, showFiles: true, title:'minified css'}))
-    .pipe(rename('i.min.css'))
+    .pipe(rename('btns.min.css'))
     .pipe(gulp.dest('./css/'));
 });
 
