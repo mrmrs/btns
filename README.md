@@ -33,14 +33,14 @@ This will watch the sass directory and do the following on file change:
 
 ```gulp production```
 
-or just to minify the css 
+or just to minify the css
 
-```gulp minify-css``` 
+```gulp minify-css```
 
 This will
   • Compile scss files down to css/app.css
   • Run autoprefixer on css/app.css (this allows you to keep vendor prefixes out of your css)
-  • Minify all css files in the ./css directory 
+  • Minify all css files in the ./css directory
   • Compress / minify all images in the ./img directory
   • Compress / minify all svg elements in the ./img/svg/ directory
 
@@ -49,7 +49,7 @@ This will
 
 The MIT License (MIT)
 
-Copyright (c) 2014 @mrmrs
+Copyright (c) 2015 @mrmrs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
