@@ -19,12 +19,12 @@
 .btn,
 .btn:link,
 .btn:visited {
-  border-radius: .3em;
+  border-radius: .25em;
   border-style: solid;
   border-width: 1px;
   color: #111;
   display: inline-block;
-  font-family: avenir, helvetica, arial, sans-serif;
+  font-family: avenir, helvetica, roboto, arial, sans-serif;
   letter-spacing: .15em;
   margin-bottom: .5em;
   padding: 1em .75em;
@@ -62,8 +62,8 @@
 
 */
 
-.btn--s { font-size: 12px; }
-.btn--m { font-size: 14px; }
+.btn--s { font-size: 14px; }
+.btn--m { font-size: 16px; }
 .btn--l { font-size: 20px; border-radius: .25em!important; }
 
 
@@ -111,14 +111,14 @@
 .btn--black:link,
 .btn--black:visited {
   color: #fff;
-  background-color: #000;
+  background-color: #111;
 }
 
 .btn--black:hover,
 .btn--black:focus {
   color: #fff;
-  background-color: #777;
-  border-color: #777;
+  background-color: #444;
+  border-color: #444;
 }
 
 .btn--black:active {
@@ -127,14 +127,30 @@
   border-color: #999;
 }
 
-.btn--black:hover,
-.btn--black:focus {
-  background-color: #444;
+
+.btn--white,
+.btn--white:link,
+.btn--white:visited {
+  color: #111;
+  background-color: #fff;
 }
 
-.btn--black {
-  background-color: #000;
+.btn--white:hover,
+.btn--white:focus {
+  color: #111;
+  background-color: rgba(255,255,255,.7);
+  border-color: rgba(255,255,255,.7);
 }
+
+.btn--white:active {
+  color: #111;
+  background-color: rgba(255,255,255,.9)
+  border-color: rgba(255,255,255,.9);
+}
+
+
+
+/* Gray */
 
 .btn--gray:link,
 .btn--gray:visited, {
@@ -197,7 +213,7 @@
 }
 
 
-/* BLUES */
+/* BLUE */
 
 .btn--blue:link,
 .btn--blue:visited {
