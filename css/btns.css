@@ -5,15 +5,14 @@
  * Author: mrmrs
  * License: MIT
  *
- *                */
-/* 
-
-  Base .btn class 
-
-  Code:
-  <a href="#" class="btn">Default button</a>
-
-*/
+ *                
+ *
+ * Base .btn class 
+ *
+ * Code:
+ * <a href="#" class="btn">Default button</a>
+ *
+ */
 .btn, .btn:link, .btn:visited {
   border-radius: 0.3em;
   border-style: solid;
