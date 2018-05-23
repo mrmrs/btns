@@ -128,7 +128,7 @@
   border-color: rgba(255, 255, 255, 0.9); }
 
 /* Gray */
-.btn--gray:link, .btn--gray:visited {
+.btn--gray, .btn--gray:link, .btn--gray:visited {
   background-color: #f0f0f0;
   border-color: #f0f0f0;
   color: #555; }
@@ -174,7 +174,7 @@
   color: #eee; }
 
 /* BLUE */
-.btn--blue:link, .btn--blue:visited {
+.btn--blue, .btn--blue:link, .btn--blue:visited {
   color: #fff;
   background-color: #0074D9; }
 
